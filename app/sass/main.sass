@@ -1,0 +1,1066 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  &:after, &:before
+    box-sizing: border-box
+
+::placeholder
+  color: #2c2c2c
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.5
+  font-family: $default-font
+  overflow-x: hidden
+  cursor: default
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: #67B2E2
+    &:required:valid
+      border-color: #67B2E2
+
+
+
+// Стартовые стили
+.hidden
+  display: none
+
+.trans
+  transition: all .4s ease
+
+a
+  @extend .trans
+  outline: none
+  text-decoration: none
+  display: inline-block
+  font-family: $default-font
+  &:hover, &:focus, &:active
+    text-decoration: none
+    outline: none
+
+ul
+  list-style-type: none
+
+h2, h1, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+  font-family: $default-font
+  font-weight: 800
+
+
+h2, h1
+  font-size: 45px
+  font-family: $default-font
+  font-weight: 800
+  color: #fff
+  text-transform: uppercase
+
+h3
+  color: #566fa0
+  font-size: 30px
+  font-family: $default-font
+  font-weight: 700
+
+h1
+  font-size: 60px
+  color: #f9fafc
+
+h4
+  font-size: 27px
+  color: #f9fafc
+  font-family: $default-font
+
+
+p
+  margin: 0
+  right: 0
+  font-family: $default-font
+  font-size: 16px
+
+a
+  transition: all 0.4s ease
+  text-decoration: none
+  cursor: pointer
+  margin: 0
+  right: 0
+
+.main-section
+  background-image: url(../img/main-bg.jpg)
+  background-repeat: no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: center
+  padding-top: 45px
+  padding-bottom: 75px
+
+.h2
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -webkit-flex-direction: column
+  -moz-flex-direction: column
+  -ms-flex-direction: column
+  -o-flex-direction: column
+  flex-direction: column
+  -ms-align-items: flex-start
+  align-items: flex-start
+  line-height: 1.1
+  margin-bottom: 30px
+  span
+    font-family: $default-font
+
+
+.main-section
+  h4
+    margin-bottom: 30px
+    span
+      font-family: $default-font
+    .color
+      color: #dae7ff
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      color: #fff
+      font-family: $default-font
+      font-size: 18px
+      margin-bottom: 10px
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      -webkit-flex-direction: row
+      -moz-flex-direction: row
+      -ms-flex-direction: row
+      -o-flex-direction: row
+      flex-direction: row
+      -ms-align-items: center
+      align-items: center
+      img
+        padding-right: 10px
+        width: auto !important
+  .owl-carousel .item
+    width: 100%
+
+.owl-dots
+  position: absolute
+  bottom: -55px
+  left: 50%
+  -webkit-transform: translateX(-50%)
+  -ms-transform: translateX(-50%)
+  -o-transform: translateX(-50%)
+  transform: translateX(-50%)
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -webkit-flex-direction: row
+  -moz-flex-direction: row
+  -ms-flex-direction: row
+  -o-flex-direction: row
+  flex-direction: row
+  .owl-dot
+    width: 8px
+    height: 8px
+    background-color: #A9ABAF
+    border-radius: 50%
+    margin: 12px
+
+.main-section .owl-carousel .owl-dots .active
+  background-color: #C6DAFF
+
+
+//radio
+.radio-conf__russia, .radio-conf__france
+  opacity: 0
+  height: 0
+  position: absolute
+  left: 500%
+  &.active
+    opacity: 1
+    height: auto
+    position: static
+
+.config-setting
+  padding-top: 30px
+  overflow: hidden
+  width: 930px
+  margin: 0px auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  flex-wrap: wrap
+  div
+    width: 60%
+    &:first-child
+      width: 37%
+
+.radios__inner
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  strong
+    font-size: 16px
+    width: 37%
+    font-size: 16px
+    font-weight: 600
+    font-family: $default-font
+    color: #272727
+
+.radios__inner-country
+  strong
+    width: 45%
+    font-size: 16px
+    font-weight: 600
+    font-family: $default-font
+    color: #272727
+  .radioCountryFrance
+    z-index: 2
+
+.hidden-radio
+  display: none
+
+.radios-to-slider.medium .slider-label
+  font-size: 13px
+  font-family: $default-font
+  color: #272727
+  top: -25px !important
+  width: 50%
+  text-align: left
+
+.radio-conf__russia
+  .radios-to-slider.medium .slider-label
+    width: 35%
+
+.radio-conf__france
+  .radios-to-slider.medium .slider-label
+    width: 55%
+
+.slider-label-active
+  color: #566FA0 !important
+
+.radios-to-slider
+  background: #fff !important
+  border: 1px solid #D0D0D0
+  display: flex
+  align-items: center
+  margin: 0 !important
+  position: relative
+  &:after
+    content: ''
+    left: 0
+    width: 100%
+    height: 3px
+    background: #E1E1E1
+
+.slider-level, .slider-lower-level
+  background: #E1E1E1 !important
+  position: relative
+  opacity: 1 !important
+  display: block !important
+
+.slider-knob
+  background: #566FA0 !important
+  width: 38px !important 
+  height: 38px !important
+
+.radios-to-slider .slider-bar
+  min-width: 38px !important
+  top: 1px
+
+
+.slider-bar
+  background: transparent !important
+  transition: all .3s ease !important
+  z-index: 3
+
+.radios-to-slider.medium
+  height: 30px
+
+
+//end
+
+.sec-2
+  background-color: #F9FAFC
+  padding-top: 45px
+  padding-bottom: 45px
+
+
+
+
+.sec-3
+  padding-top: 60px
+  padding-bottom: 75px
+  h3
+    text-align: center
+    margin-bottom: 6px
+  p
+    padding: 0px 260px
+    text-align: center
+    color: #586062
+    font-size: 16px
+  .conf-inner
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    -webkit-flex-direction: row
+    -moz-flex-direction: row
+    -ms-flex-direction: row
+    -o-flex-direction: row
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    margin-top: 55px
+    flex-wrap: wrap
+    .configuration
+      width: 18%
+      transition: all 0.4s ease
+      &:hover
+        transform: scale(1.04)
+        a
+          background-color: #758d94
+      table caption
+        font-size: 24px
+        font-family: $default-font
+        font-weight: 700
+        text-transform: uppercase
+        color: #758d94
+        background-color: #F9F9FA
+        text-align: center
+        padding: 15px 0px
+        transition: all 0.2s ease
+        caption-side: top
+    .start table
+      caption
+        color: #566fa0
+      tr .tfoot
+        p
+          color: #566fa0
+        a
+          color: #566fa0
+          border-color: #566fa0
+    .micro table
+      caption
+        color: #758d94
+      tr .tfoot
+        p
+          color: #758d94
+        a
+          color: #758d94
+          border-color: #758d94
+    .pro table
+      caption
+        color: #2dbe60
+      tr .tfoot
+        p
+          color: #2dbe60
+        a
+          color: #2dbe60
+          border-color: #2dbe60
+    .vip table
+      caption
+        color: #e01b5d
+      tr .tfoot
+        p
+          color: #e01b5d
+        a
+          color: #e01b5d
+          border-color: #e01b5d
+    .standart
+      table
+        caption
+          color: #fff
+          background-color: #566FA0
+        tr .tfoot
+          p
+            color: #fff
+          a
+            color: #fff
+            border-color: #fff
+        caption
+          padding-top: 30px
+        tr
+          td
+            padding: 9px 14px
+          .tfoot
+            padding-bottom: 40px
+      margin-top: -15px
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.27)
+    .configuration table tr td
+      width: 50%
+      padding: 9px 15px
+      transition: all 0.2s ease
+    .standart table tr
+      .left-td, .right-td
+        color: #fff !important
+    .configuration table tr
+      .tfoot
+        text-align: center
+        padding-bottom: 30px
+        p
+          font-size: 24px
+          font-family: $default-font
+          font-weight: 700
+          text-align: center
+          padding: 0
+          margin-bottom: 20px
+          span
+            font-size: 19px
+        a
+          font-size: 16px
+          padding: 10px 40px
+          text-align: center
+          border: 2px solid
+          font-family: $default-font
+          font-weight: 700
+          outline: none
+      .left-td
+        font-size: 15px
+        font-family: $default-font
+        color: #4b4b4b
+        transition: all 0.2s ease
+      .right-td
+        font-size: 15px
+        font-family: $default-font
+        color: #586062
+        text-align: center
+        transition: all 0.2s ease
+      border-top: 1px solid #F1F1F1
+      background-color: #F9F9FA
+      transition: all 0.2s ease
+    .standart table tr
+      &:nth-child(odd)
+        background-color: #677DA9
+        border-top: 1px solid #94A3C0
+      &:nth-child(even)
+        border-top: 1px solid #94A3C0
+        background-color: #566FA0
+
+.sec-3 .conf-inner .start
+  &:hover
+     table tr .tfoot a
+      background-color: $accent
+      border-color: $accent
+      color: #fff
+      
+.sec-3 .conf-inner .standart
+  &:hover
+     table tr .tfoot a
+      background-color: #fff
+      border-color: #fff
+      color: $accent !important
+
+.sec-3 .conf-inner .pro
+  &:hover
+     table tr .tfoot a
+      background-color: #2dbe60
+      border-color: #2dbe60
+      color: #fff
+
+.sec-3 .conf-inner .vip
+  &:hover
+     table tr .tfoot a
+      background-color: #e01b5d
+      border-color: #e01b5d
+      color: #fff
+
+.sec-3 .conf-inner .micro
+  &:hover
+     table tr .tfoot a
+      background-color: #758d94
+      border-color: #758d94
+      color: #fff
+
+
+
+
+.sec-4
+  background-color: #F9FAFC
+  padding: 55px 0px
+  .wrap
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    .bonus-inner
+      background-color: #fff
+      padding: 15px 25px 15px 25px
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      border: 1px solid #E8E8E8
+      width: 31%
+      img
+        width: 100%
+        height: auto
+        max-width: 63px
+        margin-right: 15px
+        margin-top: 20px
+      h5
+        font-size: 18px
+        font-family: $default-font
+        font-weight: 600
+        color: #262627
+        margin: 0
+        padding: 0
+        margin-bottom: 7px
+      p
+        line-height: 1.2
+        font-size: 16px
+        color: #262627
+        font-family: $default-font
+        
+.sec-5
+  text-align: center
+  background-image: url(../img/sec-4-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  padding: 45px 0px
+  h1
+    font-size: 60px
+    font-family: $default-font
+    font-weight: 800
+    color: #f9fafc
+  a
+    color: #fff
+    font-family: $default-font
+    font-weight: 700
+    font-size: 16px
+    padding: 12px 36px
+    border: 2px solid #fff
+    margin-top: 30px
+    &:hover
+      border-color: $accent
+
+
+.partner-section
+  background-image: url(../img/partner-bg.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  text-align: center
+  padding: 55px 150px 70px 150px
+  h3
+    margin-bottom: 50px
+  .partners-wrap
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    img
+      width: 16%
+      height: auto
+      transition: all 0.4s ease
+      &:hover
+        transform: scale(1.03)
+
+        
+
+.sec-6
+  padding-top: 50px
+  padding-bottom: 70px
+  h3
+    text-align: center
+    margin-bottom: 50px
+  .table
+    margin: 0px 45px
+    ul
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: row
+      width: 100%
+      justify-content: space-between
+      align-items: center
+      border-bottom: 1px solid  #F1F1F1
+      padding-bottom: 25px
+      margin-bottom: 27px
+      .flag
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        width: 250px
+        p
+          display: -webkit-flex
+          display: -moz-flex
+          display: -ms-flex
+          display: -o-flex
+          display: flex
+          flex-direction: column
+          font-size: 19px
+          font-family: $default-font
+          font-weight: bold
+          span
+            font-weight: normal
+            font-size: 14px
+            color: #758d94
+        .grey
+          color: #758d94
+        .blue
+          color: $accent
+        .green
+          color: #2dbe60
+        .red
+          color: #e01b5d
+        img
+          padding-right: 15px
+      li
+        line-height: 1.1
+        text-align: left
+        font-size: 14px
+        color: #7b7b7b
+        font-family: $default-font
+        a
+          font-size: 16px
+          font-family: $default-font
+          font-weight: bold
+          padding: 10px 38px
+          border: 2px solid
+          border-radius: 3px
+          background-color: transparent
+        .grey-a
+          color: #758d94
+          border-color: #758d94
+          &:hover
+            background-color: #758d94
+            color: #fff
+        .blue-a
+          color: $accent
+          border-color: $accent
+          &:hover
+            background-color: $accent
+            color: #fff
+        .green-a
+          color: #2dbe60
+          border-color: #2dbe60
+          &:hover
+            background-color: #2dbe60
+            color: #fff
+        .red-a
+          color: #e01b5d
+          border-color: #e01b5d
+          &:hover
+            background-color: #e01b5d
+            color: #fff
+      .price
+        font-size: 20px
+        font-weight: bold
+        color: #758d94
+        font-family: 'SFUID'
+        font-weight: 700
+      .grey
+        color: #758d94
+      .blue
+        color: $accent
+      .green
+        color: #2dbe60
+      .red
+        color: #e01b5d
+      .center
+        color: #6e6e6e
+      .after
+        position: relative
+        padding-top: 15px
+        padding-bottom: 15px
+        display: inline-block
+        &:after
+          content: ''
+          height: 50px
+          width: 1px
+          background-color: #DDDDDD
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          right: -25px
+
+
+
+.section-9
+  background-color: #F9FAFC
+  padding: 50px 0px
+  h3
+    margin-bottom: 30px
+    line-height: 1.1
+  .table
+    width: 100%
+    thead
+      background-color: $accent
+      tr
+        th
+          padding: 9px 15px
+          line-height: 1.2
+          color: #fff
+          font-size: 15px
+          font-family: $default-font
+          font-weight: 600
+    tbody
+      background-color: #fff
+      border: 1px solid #E8E8E8
+      border-top: none
+      tr
+        transition: all 0.4s ease
+        &:hover
+          a
+            background-color: $accent
+            color: #fff !important
+        td
+          line-height: 1.1
+          color: #404040
+          font-family: $default-font
+          font-size: 15px
+          padding: 6px 15px
+          border-bottom: 1px solid #E8E8E8
+          transition: all 0.4s ease
+        .price
+          font-weight: 600
+          color: #3b3b3b
+        .btn
+          transition: all 0.4s ease
+          a
+            color: $accent
+            border: 2px solid $accent
+            font-size: 13px
+            font-family: $default-font
+            font-weight: 700
+            padding: 8px 11px
+            transition: all 0.4s ease
+          
+
+.sec-7
+  background-color: #F9FAFC
+  padding-top: 30px
+  padding-bottom: 30px
+  .wrap-btn
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    &:hover
+      .btn
+        background-color: $accent
+        color: #fff
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25)
+      .blue
+        color: $accent
+        box-shadow: none
+        background-color: transparent
+    .btn
+      border: 2px solid $accent
+      font-size: 16px
+      font-family: $default-font
+      font-weight: 700
+      color: $accent
+      padding: 12px 50px
+    .blue
+      background-color: $accent
+      color: #fff
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25)
+
+        
+.sec-8
+  padding-top: 40px
+  padding-bottom: 50px
+  h3
+    text-align: center
+    margin-bottom: 17px
+  p
+    text-align: center
+    padding: 0px 265px
+    line-height: 1.4  
+    margin-bottom: 50px
+  .price-left-wrap
+    margin-left: 40px
+    margin-right: 18px
+    padding: 10px 40px 0px 40px 
+    border:  1px solid #E7E7E7
+    .img-wrap
+      text-align: center
+      margin-bottom: 25px
+    .ul-wrap
+      ul
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 0
+        li
+          display: -webkit-flex
+          display: -moz-flex
+          display: -ms-flex
+          display: -o-flex
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          align-items: center
+          width: 100%
+          border: 1px solid #E7E7E7
+          border-left: none
+          border-right: none
+          border-bottom: none
+          height: 56px
+          font-size: 16px
+          font-family: $default-font
+          color: #4b4b4b
+          .text
+            color: #586062
+          .img
+            img
+              margin-left: 19px
+  .price-right-wrap
+    margin-right: 25px
+    a
+      width: 100%
+      text-align: center
+      margin-bottom: 11px
+      padding: 12px 65px
+      background-color: #F1F1F1
+      color: #5e5e5e
+      font-size: 18px
+      &:hover
+        background-color: $accent
+        color: #fff
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2)
+    .active
+      background-color: $accent
+      color: #fff
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2)
+      &:hover
+        background-color: #F1F1F1
+        color: #5e5e5e
+  .input-wrap
+    margin-left: 40px
+    margin-right: 25px
+    padding: 25px 40px
+    background-color: #F9FAFC   
+    margin-top: 35px
+    margin-bottom: 50px  
+    .form
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      .inp
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        width: 40%
+        justify-content: space-between
+        align-items: center
+        input
+          width: 95px
+          padding: 7px 15px 7px 15px
+          text-align: center
+          border: 1px #DDDDDD dashed
+          color: #2c2c2c
+          font-family: $default-font
+          font-size: 18px
+        label
+          color: #2c2c2c
+          font-family: $default-font
+          font-size: 18px
+      .button
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 40%
+        p
+          padding: 0
+          margin: 0
+          color: #2c2c2c
+          font-family: $default-font
+          font-size: 18px
+          span
+            font-weight: 700
+            color: $accent
+            font-size: 24px
+        button
+          color: $accent
+          border: 2px solid $accent
+          font-size: 16px
+          font-family: $default-font
+          font-weight: 700
+          background-color: transparent
+          padding: 8px 50px
+          transition: all 0.4s ease
+          border-radius: 3px
+          &:hover
+            background-color: $accent
+            color: #fff
+  .table-wrap
+    p
+      padding: 0 180px
+    table
+      text-align: center
+      margin: 0 140px
+      border: 1px solid #F1F1F1
+      thead
+        tr
+          th
+            padding: 10px 20px
+            background-color: $accent
+            border-left: 1px solid #F1F1F1
+            height: 56px
+            color: #fff
+            font-size: 24px
+            font-family: $default-font
+            font-weight: 700
+          .logo
+            background-color: #ECEFF5
+            padding: 0
+          .btn
+            font-size: 16px
+            line-height: 1.2
+      tbody
+        tr
+          border-bottom: 1px solid #F1F1F1
+          td
+            height: 50px
+            border-left: 1px solid #F1F1F1
+            font-size: 16px
+            font-weight: normal
+            color: #586062
+            a
+              color: $accent
+              font-weight: 700
+              &:hover
+                opacity: 0.7
+  .a-wrap
+    margin-top: 20px
+    text-align: center
+    a
+      color: $accent
+      border:  2px solid $accent
+      font-weight: 700
+      font-size: 16px
+      padding: 9px 38px
+      border-radius: 3px
+      text-align: center
+      &:hover
+        color: #fff
+        background-color: $accent
+
+
+
+//index-2
+.index2-sec
+  padding-top: 30px
+  h1
+    font-size: 72px
+  a
+    padding: 8px 38px
+    border-radius: 3px
+    &:hover
+      background-color: $accent
+      color: #fff
+
+
+.sec-free
+  background-image: url(../img/index-2-bg.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  padding-top: 50px
+  padding-bottom: 55px
+  h3
+    color: #fff
+  p
+    text-align: center
+    color: #fff
+    font-size: 16px
+  .free-wrap
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    padding: 0 20px
+    margin-top: 50px
+    .free
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 20%
+      p
+        font-size: 18px
+        font-weight: 600
+      img
+        max-width: 105px
+        width: auto
+        min-width: 90px
+        transition: all 0.4s ease
+        &:hover
+          transform: scale(1.04)
+
+
+.sec-6-2
+  background-color: #F9FAFC
+
+@import "media" // Always at the end
